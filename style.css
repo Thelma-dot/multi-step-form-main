@@ -74,6 +74,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    justify-content: center;
 }
 
 .steps__item {
@@ -377,6 +378,14 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white);
+    padding: 1rem;
+    box-shadow: 0 -10px 25px rgba(2, 41, 90, .08);
+    z-index: 10;
 }
 
 /* Align single action (Step 1) to the right */
@@ -512,6 +521,19 @@ body.is-yearly .billing__label[data-billing="yearly"] {
 .panel--center {
     text-align: center;
     padding: 3rem 1rem;
+}
+
+/* Provide space for sticky nav on mobile */
+@media (max-width: 899px) {
+    body {
+        padding-bottom: 84px;
+    }
+
+    .content {
+        margin-top: -14rem;
+        position: relative;
+        z-index: 5;
+    }
 }
 
 .thanks__icon {
