@@ -378,14 +378,6 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     justify-content: space-between;
     align-items: center;
     margin-top: 1.5rem;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: var(--white);
-    padding: 1rem;
-    box-shadow: 0 -10px 25px rgba(2, 41, 90, .08);
-    z-index: 10;
 }
 
 /* Align single action (Step 1) to the right */
@@ -534,6 +526,18 @@ body.is-yearly .billing__label[data-billing="yearly"] {
         position: relative;
         z-index: 5;
     }
+
+    /* Sticky nav only on mobile */
+    .nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--white);
+        padding: 1rem;
+        box-shadow: 0 -10px 25px rgba(2, 41, 90, .08);
+        z-index: 10;
+    }
 }
 
 .thanks__icon {
@@ -588,7 +592,7 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     .sidebar__bg {
         display: block;
         position: absolute;
-        inset: 1rem;
+        inset: 0;
         border-radius: 12px;
         background: url("./assets/images/bg-sidebar-desktop.svg") no-repeat center/cover;
     }
