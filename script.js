@@ -114,6 +114,12 @@
     }
 
     function init() {
+        // Prevent actual submit; show confirmation screen instead
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            confirm();
+        });
+
         // Step navigation
         form.addEventListener('click', (e) => {
             const nextBtn = e.target.closest('.js-next');
