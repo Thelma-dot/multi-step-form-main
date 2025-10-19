@@ -583,12 +583,12 @@ body.is-yearly .billing__label[data-billing="yearly"] {
 
     /* 900px */
     .app {
-        min-height: 100vh;
+        min-height: auto;
         display: grid;
         grid-template-columns: 310px 1fr;
-        align-items: center;
+        align-items: stretch;
         width: min(980px, 92%);
-        margin: 0 auto;
+        margin: 6rem auto;
         background: var(--white);
         border-radius: 20px;
         box-shadow: 0 15px 30px rgba(2, 41, 90, .08);
@@ -640,7 +640,7 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     }
 
     .content {
-        margin: 0;
+        margin: auto 0;
         width: 100%;
         min-height: 500px;
         padding: 2rem 3rem;
