@@ -33,8 +33,6 @@
     --blue-100: hsl(218, 100%, 97%);
     --blue-50: hsl(231, 100%, 99%);
     --white: #fff;
-    /* Controls how far the white card overlaps the mobile header graphic */
-    --mobile-content-offset: 14rem;
 }
 
 * {
@@ -524,8 +522,7 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     }
 
     .content {
-        /* Keep the white content starting at the same top position on all steps */
-        margin-top: calc(-1 * var(--mobile-content-offset));
+        margin-top: -14rem;
         position: relative;
         z-index: 5;
     }
