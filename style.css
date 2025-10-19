@@ -632,13 +632,16 @@ body.is-yearly .billing__label[data-billing="yearly"] {
 
     .content {
         margin: auto 0;
-        width: auto;
+        width: 100%;
+        min-height: 500px;
         padding: 2rem 3rem;
         background: transparent;
         border-radius: 0;
         box-shadow: none;
         max-width: 560px;
         justify-self: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .plans {
