@@ -111,6 +111,9 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 15px 30px rgba(2, 41, 90, .08);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
 }
 
 .panel {
