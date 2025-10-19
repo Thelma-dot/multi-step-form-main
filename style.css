@@ -86,8 +86,8 @@ body {
 .steps__index {
     display: inline-grid;
     place-items: center;
-    width: 36px;
-    height: 36px;
+    width: 2.25rem; /* 36px */
+    height: 2.25rem; /* 36px */
     border-radius: 50%;
     border: 1px solid var(--blue-50);
     color: var(--blue-50);
@@ -120,8 +120,8 @@ body {
     display: block;
 }
 
-.panel[hidden] {
-    display: none !important;
+[hidden] {
+    display: none;
 }
 
 .panel__header {
@@ -519,9 +519,9 @@ body.is-yearly .billing__label[data-billing="yearly"] {
 }
 
 /* Provide space for sticky nav on mobile */
-@media (max-width: 899px) {
+@media (max-width: 56.1875em) { /* 899px */
     body {
-        padding-bottom: 84px;
+        padding-bottom: 5.25rem; /* 84px */
     }
 
     .content {
@@ -535,9 +535,8 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     /* Sticky nav only on mobile */
     .nav {
         position: fixed;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset-inline: 0;
+        inset-block-end: 0;
         background: var(--white);
         padding: 1rem;
         box-shadow: 0 -10px 25px rgba(2, 41, 90, .08);
@@ -575,7 +574,7 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     border: 0;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25em) { /* 900px */
     .app {
         min-height: auto;
         display: grid;
@@ -660,5 +659,14 @@ body.is-yearly .billing__label[data-billing="yearly"] {
 
     .plan__offer {
         display: block;
+    }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
     }
 }
