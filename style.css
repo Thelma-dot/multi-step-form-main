@@ -589,6 +589,8 @@ body.is-yearly .billing__label[data-billing="yearly"] {
     .sidebar {
         background: none;
         padding: 2rem;
+        position: relative;
+        overflow: hidden;
     }
 
     .sidebar__bg {
@@ -597,6 +599,7 @@ body.is-yearly .billing__label[data-billing="yearly"] {
         inset: 0;
         border-radius: 12px;
         background: url("./assets/images/bg-sidebar-desktop.svg") no-repeat center/cover;
+        background-size: 100% 100%;
     }
 
     .steps {
