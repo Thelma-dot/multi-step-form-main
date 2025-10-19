@@ -525,6 +525,8 @@ body.is-yearly .billing__label[data-billing="yearly"] {
         margin-top: -14rem;
         position: relative;
         z-index: 5;
+        /* Ensure container expands downward only, keeping top position fixed */
+        align-self: start;
     }
 
     /* Sticky nav only on mobile */
